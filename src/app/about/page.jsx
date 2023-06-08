@@ -8,15 +8,15 @@ const About = () => {
     <div className={styles.container}>
       <div className={styles.imgContainer}>
         <Image
-          src="https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="https://images.pexels.com/photos/1106468/pexels-photo-1106468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           fill={true}
           alt=""
           className={styles.img}
         />
         <div className={styles.imgText}>
-          <h1 className={styles.imgTitle}>Digital Storytellers</h1>
+          <h1 className={styles.imgTitle}>Search your books on the go..</h1>
           <h2 className={styles.imgDesc}>
-            Handcrafting award winning digital experiences
+          No more hassle.
           </h2>
         </div>
       </div>
@@ -47,11 +47,11 @@ const About = () => {
             eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. -
             Creative Illustrations
             <br />
-            <br /> - Dynamic Websites
+            <br /> - omnis officiis
             <br />
-            <br /> - Fast and Handy
+            <br /> - optio volup
             <br />
-            <br /> - Mobile Apps
+            <br /> - lor sit amet
           </p>
           <Button url="/contact" text="Contact" />
         </div>
