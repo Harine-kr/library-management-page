@@ -8,22 +8,22 @@ const Page = () => {
   const [books, setBooks] = useState(booksJson);
   const [searchTerm, setSearchTerm] = useState("");
 
-
   useEffect(() => {
-    
     console.log(booksJson);
     console.log(books);
   }, [books]);
 
   const searchItem = (e) => {
     setSearchTerm(e.target.value);
-    const result = books.filter((book) =>
-      book.title.toLowerCase().includes(e.target.value.toLowerCase())
+    const result = books.filter(
+      (book) =>
+        book.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
+        book.author.toLowerCase().includes(e.target.value.toLowerCase()) ||
+        book.subject.toLowerCase().includes(e.target.value.toLowerCase()) ||
+        book.publishDate.toLowerCase().includes(e.target.value.toLowerCase())
     );
     setBooks(result);
   };
-
-  
 
   return (
     <div className={styles.container}>
@@ -35,26 +35,28 @@ const Page = () => {
             type="text"
             value={searchTerm}
             onChange={(e) => searchItem(e)}
-            placeholder="Search by Title"
+            placeholder="Search"
             className={styles.searchInput}
           />
-          
         </div>
-        <div className={styles.bookCount}>
-        </div>
+        <div className={styles.bookCount}></div>
 
         <div className={styles.bookGrid}>
           {books.map((book) => (
             <div key={book.id} className={styles.bookCard}>
               <h3>{book.title}</h3>
-              <p>Author: {book.author}</p>
-              <p>Subject: {book.subject}</p>
-              <p>Publish Date: {book.publishDate}</p>
+              <p>
+                <b>Author:</b> {book.author}
+              </p>
+              <p>
+                <b>Subject:</b> {book.subject}
+              </p>
+              <p>
+                <b>Publish Date:</b> {book.publishDate}
+              </p>
             </div>
           ))}
         </div>
-
-
       </div>
     </div>
   );
