@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
-import Button from "@/components/Button/Button";
-
+import Button from "../components/button/Button";
 export const metadata = {
   title: "Lama Dev Contact Information",
   description: "This is Contact Page",
@@ -11,7 +10,7 @@ export const metadata = {
 const Contact = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Stuck in the maze? Don't shy away</h1>
+      <h1 className={styles.title}>Stuck in the maze? Do not shy away</h1>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
           <Image
