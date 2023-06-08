@@ -1,3 +1,60 @@
-.container{
-    color: rebeccapurple;
-}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .title {
+    font-size: 36px;
+    color: #194c33;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filterInput {
+    padding: 5px;
+  }
+  
+  .bookCount {
+    font-size: 16px;
+    color: #888;
+  }
+  
+  .bookGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .bookCard {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .paginationButton {
+    padding: 5px 10px;
+    background-color: #53c28b;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
